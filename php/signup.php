@@ -17,16 +17,17 @@
                     $tmp_name = $_FILES['image']['tmp_name'];
 
                     $img_explode = explode('.',$img_name);
-                    $img_ext = end($img_explode);
+                    $img_ext = end($img_explode); // getting the extension of the user uploaded image
 
                     $extensions = ["jpeg", "png", "jpg"];
                     if(in_array($img_ext, $extensions) === true){
                         $types = ["image/jpeg", "image/jpg", "image/png"];
                         if(in_array($img_type, $types) === true){
-                            $time = time();
+                            $time = time(); // will return current time
+                                            // gonna need this time to append the time with the new name to get unique name of the image everytime
                             $new_img_name = $time.$img_name;
                             if(move_uploaded_file($tmp_name,"images/".$new_img_name)){
-                                $ran_id = rand(time(), 100000000);
+                                $ran_id = rand(time(), 100000000); // creating random id for the user
                                 $status = "Active now";
                                 $encrypt_pass = md5($password);
                                 $insert_query = mysqli_query($conn, "INSERT INTO users (unique_id, fname, lname, email, password, img, status)
