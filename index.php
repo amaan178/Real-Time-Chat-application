@@ -47,5 +47,6 @@
     </div>
 
     <script src="javasctipt/pass-show-hide.js"></script>
+    <script src="javasctipt/signup.js"></script>
 </body>
 </html>
