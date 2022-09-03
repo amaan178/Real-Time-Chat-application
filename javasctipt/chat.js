@@ -16,15 +16,6 @@ inputField.onkeyup = ()=>{
         sendBtn.classList.remove("active");
     }
 }
-
-chatBox.onmouseenter = ()=>{
-    chatBox.classList.add("active");
-}
-
-chatBox.onmouseleave = ()=>{
-    chatBox.classList.remove("active");
-}
-
 sendBtn.onclick = ()=>{
     let xhr = new XMLHttpRequest();
     xhr.open("POST", "php/insert-chat.php", true);
@@ -39,7 +30,13 @@ sendBtn.onclick = ()=>{
     let formData = new FormData(form);
     xhr.send(formData);
 }
+chatBox.onmouseenter = ()=>{
+    chatBox.classList.add("active");
+}
 
+chatBox.onmouseleave = ()=>{
+    chatBox.classList.remove("active");
+}
 setInterval(() =>{
     let xhr = new XMLHttpRequest();
     xhr.open("POST", "php/get-chat.php", true);
