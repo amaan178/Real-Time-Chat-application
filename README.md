@@ -9,3 +9,6 @@ On this page, you can see their image, name, status, and the last message if the
 Once you send a message to another user then immediately that message appears in your chat box and another user chatbox too which you’ve sent the message. On the message receiver chatbox, this user received the message with the sender image. Remember chatbox will be automatically scrolled to the bottom once the chatbox starts scrolling. You can log out from the chat application at any time and once you log out, immediately all other users will know that you’ve been log out or offline.
 
 Once you log out, you can again login and with your email and password that you used when signing up for the form. If you entered the correct credentials then you’ll be redirected to the user’s page and all other users will immediately know that you’ve logged on and now active.
+
+## Screenshot
+![App Screenshot](img.png)
